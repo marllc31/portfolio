@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marl's Cybersecurity Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg: #0e0e0e;
+      --card: #1a1a1a;
+      --accent: #c62828;
+      --text: #f5f5f5;
+      --muted: #aaaaaa;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png') center/cover no-repeat;
+      border: 2px solid var(--accent);
+      flex-shrink: 0;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--accent);
+      color: var(--fg);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      user-select: none;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .quote {
+      font-size: 1rem;
+      margin-top: 1rem;
+      font-style: italic;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .quick-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .quick-links a {
+      text-decoration: none;
+      color: var(--text);
+      background: var(--accent);
+      padding: 0.7rem 1rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .quick-links a:hover {
+      background: #e53935;
+    }
+
+    .contact-line {
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid #333;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .quote {
+      max-width: 900px;   /* match the container max width */
+      margin: 1.5rem auto 0; /* center horizontally */
+      grid-column: span 2;
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .card.thm-card {
+      width: 100%;
+      max-width: 320px; /* THM badge width is ~300, plus a bit of padding */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .thm-badge-wrapper {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .thm-badge-wrapper iframe {
+      width: 100%;
+      height: 100px; /* THM badge height is fixed, you can tweak if needed */
+      border: none;
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      width: 100%;
+      bottom: 1rem;
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        grid-template-columns: 1fr;
+        justify-items: center; /* center both cards */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Profile Card -->
+    <div class="card">
+      <div>
+        <div class="profile-header">
+          <div class="avatar"></div>
+          <div>
+            <h1>Marlline C</h1>
+            <div class="tagline">Aspiring SOC Analyst | Threat Intelligence Enthusiast</div>
+          </div>
+        </div>
+        <div class="intro">
+        Welcome — this is a compact showcase of hands-on SOC labs and investigations.<br><br>
+        I've been building practical cybersecurity skills through labs and simulations, focusing on SIEM-driven investigations, phishing triage, and endpoint analysis.  
+        The PDF portfolio contains detailed lab writeups, screenshots, and redacted incident reports.
+        </div> 
+      </div>
+      <br>
+      <div class="tags">
+        <div class="tag">Splunk</div>
+        <div class="tag">Wireshark</div>
+        <div class="tag">Email Triage</div>
+        <div class="tag">Log Analysis</div>
+        <div class="tag">Python (basic)</div>
+        <div class="tag">Threat Intelligence</div>
+        <div class="tag">Incident Report</div>
+      </div>
+    </div>
+
+    <!-- Quick Links Card -->
+    <div class="card thm-card">
+      <div class="thm-badge-wrapper">
+        <iframe 
+          src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2632572"
+          scrolling="no"
+          frameborder="0">
+        </iframe>
+      </div>
+      <div class="quick-links">
+        <a href="D:\MARL'S\0 - BERKAS\Github Porto\Marl's Porto.pdf" target="_blank">View Portfolio</a>
+        <a href="https://www.linkedin.com/in/marllc" target="_blank">LinkedIn</a>
+        <a href="https://github.com/marllc31">Github</a>
+      </div>
+      <div class="quote">🐺 “Hunt. Analyze. Defend. Repeat.”</div>
+    </div>
+
+    <!-- Quote -->
+    <div class="quote"> 
+      “🌑Silent but scanning🐾 — Newbie in the terminal, veteran in curiosity. Walking through walls, one module at a time🌱.”
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Marlline C — S1l3ntW00f
+  </footer>
+
+</body>
+</html>
